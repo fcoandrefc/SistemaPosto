@@ -15,12 +15,12 @@ Valores valor = new Valores();
 	    
 	    PagamentoLavagem tipo = new PagamentoLavagem();
 	    
-		System.out.println("Especifique o Tamnho Carro:");
+		System.out.println("Especifique o Tamanho Carro:");
 		Scanner EntradaLavagem = new Scanner(System.in);
 		
 		do {
 		    
-			System.out.printf("|1-PEQUENO| 2-MEDIO| 3- GRANDE ");
+			System.out.printf("|1-PEQUENO - %2.2f | 2-MEDIO - %2.2f| 3- GRANDE - %2.2f ",valor.ValorCarroPequeno(),valor.ValorCarroMedio(),valor.ValorCarroGrande());
 			OpcaoLavagem = EntradaLavagem.nextInt();
 			 
 			   
@@ -61,7 +61,7 @@ Valores valor = new Valores();
 		 
 do {
 		    
-			System.out.printf("Informe Tipo Lavage| 1- SIMPLES | 2-COMPLETA ");
+			System.out.printf("Informe Tipo Lavage| 1- SIMPLES - %2.2f | 2-COMPLETA - %2.2f", valor.ValorLavSimples(),valor.ValorLavCompleta());
 			OpcaoLavagem = EntradaLavagem.nextInt();
 			 
 			   

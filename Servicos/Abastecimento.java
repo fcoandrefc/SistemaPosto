@@ -1,7 +1,7 @@
 package Servicos;
 
 import java.util.Scanner;
-import Pagamentos.PagamentoCombustivel;
+import Pagamentos.PagamentoAbastecimento;
 import ValorServicos.Valores;
 
 
@@ -13,14 +13,14 @@ public class Abastecimento {
 	    
 	    int OpcaoAbastecer = 0;
 	    
-	    PagamentoCombustivel tipo = new PagamentoCombustivel();
+	    PagamentoAbastecimento tipo = new PagamentoAbastecimento();
 	    
 		System.out.println("Qual Combustive deseja:");
 		Scanner entradaAbastecer = new Scanner(System.in);
 		
 		do {
 		    
-			System.out.printf("|1-GASOLINA| 2-ALCOOL| 3-DIESEL ");
+			System.out.printf("|1-GASOLINA - %2.2f | 2-ALCOOL - %2.2f | 3-DIESEL - %2.2f ",valor.ValorGasolina(),valor.ValorAlcool(),valor.ValorDiesel());
 			OpcaoAbastecer = entradaAbastecer.nextInt();
 			 
 			   

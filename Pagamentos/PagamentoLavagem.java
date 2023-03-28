@@ -12,15 +12,15 @@ public void PagamentoFinal(int OpcaoAbastecer, double ValorCombustivel){
 		double ValorNota = 0;
 	
 		Scanner entradaPagamento = new Scanner(System.in);
+
 		
-			
-		System.out.printf(" Valor da sua Lavagem é : %2.2f", ValorCombustivel);
+		System.out.printf("Valor da sua Lavagem é %2.2f :", ValorCombustivel);
 		System.out.println(" ");
 		
 		
 		do {
 
-			System.out.println("Como deseja Pagar | 1 - Dinheiro | 2-Cartao |");
+			System.out.println("Como deseja Pagar | 1 - Dinheiro | 2-Cartao");
 			OpcaoPagamento = entradaPagamento.nextInt();
 			
 		  switch (OpcaoPagamento) {
@@ -34,19 +34,18 @@ public void PagamentoFinal(int OpcaoAbastecer, double ValorCombustivel){
 					
 					if (ValorPagamento>ValorCombustivel) {
 						
-						System.out.println("Valor pagamento inferior ao valor da lavagem!!!");
+						System.out.println("Valor Invalido:");
 						
 					}
-					
+
 					
 				}while(ValorPagamento >ValorCombustivel);
 
 				System.out.println("Pagamento Processador");
-				System.out.printf("| Valor Dinheiro: %2.2f | Valor Lavagem : %2.2f | Troco: %2.2f " , ValorNota, ValorCombustivel,
-				(ValorNota - ValorCombustivel));
-				
-      			OpcaoPagamento = 3;
-	
+			    System.out.printf("| Valor Dinheiro: %2.2f  | Valor Lavagem : %2.2f | Troco %2.2f: ",ValorNota,ValorCombustivel, (ValorNota - ValorCombustivel));
+				OpcaoPagamento = 3;
+
+				   		
 			   
                  
 			 break;
@@ -54,7 +53,7 @@ public void PagamentoFinal(int OpcaoAbastecer, double ValorCombustivel){
 			case 2:
 				
 				System.out.println("Pagamento Processador, Obrigado Pela preferencia!");
-				System.out.printf(" Valor Lavagem: %2.2f", ValorCombustivel);
+				System.out.printf(" Valor Lavagem: %2.2f  ", ValorCombustivel);
 				OpcaoPagamento = 3;
 
 				break;
